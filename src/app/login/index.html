@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 col-xs-push-3">
+			<form class="form-signin" name="myForm" data-ng-submit="loginCtrl.doLogin()">
+				<h2 class="form-signin-heading">Please sign in</h2>
+					<div class="form-group">
+						<label for="inputEmail" class="sr-only">Email address</label>
+						<input type="text" id="inputEmail" class="form-control" placeholder="Email address" data-ng-model="loginCtrl.userName" data-ng-change="loginCtrl.onInput()" required autofocus>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword" class="sr-only">Password</label>
+						<input type="password" id="inputPassword" class="form-control" placeholder="Password" data-ng-model="loginCtrl.password" data-ng-change="loginCtrl.onInput()" required>
+					</div>
+					<div class="checkbox">
+						<label>
+						<input type="checkbox" value="remember-me"> Remember me
+						</label>
+					</div>
+					<div class="alert alert-danger" role="alert" data-ng-show="loginCtrl.loginFailed">Invalid User Name or Password. Please try again.</div>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" data-ng-disabled="!myForm.$valid">Sign in</button>
+			</form>
+		<div>
+			userName: user
+			password: secret
+		</div>
+	</div>
+</div> <!-- /container -->
